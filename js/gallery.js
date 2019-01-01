@@ -10,7 +10,9 @@ function activateGallery() {
     thumbnail.addEventListener("click", function() {
       // Set clicked image as main image(gallery-photo)
       let newImageSrc = thumbnail.dataset.largeVersion;
+      let newImageAlt = thumbnail.alt;
       mainImage.setAttribute("src", newImageSrc);
+      mainImage.setAttribute("alt", newImageAlt);
     });
   });
 }
