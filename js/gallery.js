@@ -1,3 +1,16 @@
+// Activates the image gallery.
+// The main task is to attach an event listener to each image in the Gallery
+// and respond appropriately on click.
 function activateGallery() {
-  alert("Hello from the gallery file!");
+  let thumbnails = document.querySelector("#gallery-thumbs").
+                            querySelectorAll("img");
+  let mainImage = document.querySelector("#gallery-photo img");
+
+  thumbnails.forEach(function(thumbnail) {
+    thumbnail.addEventListener("click", function() {
+      // Set clicked image as main image(gallery-photo)
+      let newImageSrc = thumbnail.dataset.largeVersion;
+      mainImage.setAttribute("src", newImageSrc);
+    });
+  });
 }
