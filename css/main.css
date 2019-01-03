@@ -308,7 +308,7 @@ h4 {
 /*GALLERY STYLES */
 .gallery-thumbs {
   height: 90vh;
-  /* overflow: scroll; */
+  overflow: auto;
 }
 .gallery-thumbs > div {
   cursor: pointer;
